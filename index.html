@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"> <!-- Default to dark mode -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Hu - Academic Profile</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            light: '#0284c7', // Sky-600 for light mode (better contrast)
+                            dark: '#00d2ff',  // MIT QPAI Cyan for dark mode
+                        },
+                        darkbg: '#111111' // Deep academic black
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            line-height: 1.7;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Subtle styling for lists */
+        ul.bullet-list {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        
+        ul.bullet-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Smooth transition for theme toggle */
+        * {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-darkbg text-gray-800 dark:text-[#d1d5db] selection:bg-accent-light selection:text-white dark:selection:bg-accent-dark dark:selection:text-black">
+
+    <!-- Theme Toggle Button -->
+    <div class="fixed top-6 right-6 md:top-8 md:right-8 z-50">
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        
+        <!-- Header & Bio Section -->
+        <div class="flex flex-col-reverse md:flex-row gap-10 md:gap-16 items-start">
+            
+            <!-- Left Text Content -->
+            <div class="flex-1">
+                <h1 class="text-4xl font-bold tracking-tight mb-2 text-black dark:text-[#f3f4f6]">James Hu</h1>
+                
+                <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                    <strong class="text-gray-900 dark:text-gray-200">Graduate Research Assistant</strong> &middot; University of Michigan, Ann Arbor
+                </div>
+                <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
+                    jameshhu [at] umich.edu &middot; +1 (814) 321-6044
+                </div>
+                
+                <div class="text-sm mb-6 flex gap-3 text-accent-light dark:text-accent-dark">
+                    <a href="https://github.com/notFatal" target="_blank" class="hover:underline">GitHub</a> <span class="text-gray-400 dark:text-gray-600">|</span>
+                    <a href="https://linkedin.com/in/jamesjingzhihu" target="_blank" class="hover:underline">LinkedIn</a> <span class="text-gray-400 dark:text-gray-600">|</span>
+                    <a href="james_cv (3).pdf" target="_blank" class="font-medium hover:underline">CV (PDF)</a>
+                </div>
+
+                <div class="space-y-4 text-[15px]">
+                    <p>
+                        I am a Graduate Research Assistant at the Quantum Engineering Lab (led by Prof. Zheshen Zhang) at the <strong class="text-gray-900 dark:text-gray-200">University of Michigan, Ann Arbor</strong>, where I am pursuing my M.S. in Electrical and Computer Engineering (GPA: 4.0/4.0). 
+                    </p>
+                    <p>
+                        My research interests lie in quantum information, photonic chip design, and variational quantum algorithms. The main theme of my work is bridging software optimization with experimental atomic physics. Currently, I focus on conducting high-fidelity photonics and quantum chip simulations using <span class="font-medium text-accent-light dark:text-accent-dark">Tidy3D</span> to optimize device performance, as well as managing the full hardware testing pipeline from setup to data acquisition.
+                    </p>
+                    <p>
+                        Previously, I was a Research Assistant at the Institute of Quantum Electronics at <strong class="text-gray-900 dark:text-gray-200">Peking University</strong> working with Prof. Jingbiao Chen on 420 nm-pumped hot-rubidium vapor experiments. I also spent time as a Research Intern in Prof. Xiao Yuan's group at PKU, developing <span class="font-medium text-accent-light dark:text-accent-dark">Variational Quantum Algorithms (VQA)</span> and neural-network quantum states using <span class="font-medium text-accent-light dark:text-accent-dark">PyTorch</span>. I obtained my B.E. in Computer Science from <strong class="text-gray-900 dark:text-gray-200">Pennsylvania State University</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Portrait Image -->
+            <div class="w-full md:w-64 shrink-0">
+                <img src="微信图片_20260221225420_87_21.jpg" alt="James Hu" class="w-full h-auto rounded object-cover shadow-xl border border-gray-200 dark:border-gray-800 opacity-95 hover:opacity-100 transition duration-300">
+            </div>
+
+        </div>
+
+        <hr class="border-gray-200 dark:border-gray-800 my-12">
+
+        <!-- Education Section -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-6 tracking-tight text-black dark:text-[#f3f4f6]">Education</h2>
+            <div class="space-y-4 text-[15px]">
+                <div class="flex flex-col md:flex-row justify-between md:items-baseline">
+                    <div>
+                        <strong class="text-gray-900 dark:text-gray-200">University of Michigan, Ann Arbor</strong>
+                        <p class="text-gray-600 dark:text-gray-400">M.S. in Electrical and Computer Engineering</p>
+                    </div>
+                    <div class="text-gray-500 dark:text-gray-500 text-sm mt-1 md:mt-0">2025 &ndash; 2027 (Expected)</div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between md:items-baseline">
+                    <div>
+                        <strong class="text-gray-900 dark:text-gray-200">Pennsylvania State University, State College</strong>
+                        <p class="text-gray-600 dark:text-gray-400">B.E. in Computer Science</p>
+                    </div>
+                    <div class="text-gray-500 dark:text-gray-500 text-sm mt-1 md:mt-0">2021 &ndash; 2025</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-6 tracking-tight text-black dark:text-[#f3f4f6]">Experience</h2>
+            <div class="space-y-8 text-[15px]">
+                
+                <!-- UMich -->
+                <div>
+                    <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-1">
+                        <strong class="text-gray-900 dark:text-gray-200">University of Michigan</strong>
+                        <div class="text-gray-500 text-sm">Sep 2025 &ndash; Present</div>
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm mb-2">Graduate Research Assistant &middot; Quantum Engineering Lab (Prof. Zheshen Zhang)</div>
+                    <ul class="bullet-list text-sm text-gray-700 dark:text-gray-300">
+                        <li>Conducted high-fidelity photonics/quantum chip simulations using <span class="text-accent-light dark:text-accent-dark">Tidy3D</span> to optimize device performance.</li>
+                        <li>Performed hands-on chip testing and characterization, managing the full pipeline from setup to data acquisition.</li>
+                        <li>Processed experimental test data using Python to identify key performance metrics for hardware iterations.</li>
+                    </ul>
+                </div>
+
+                <!-- PKU 1 -->
+                <div>
+                    <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-1">
+                        <strong class="text-gray-900 dark:text-gray-200">Peking University</strong>
+                        <div class="text-gray-500 text-sm">Jul 2025 &ndash; Sep 2025</div>
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm mb-2">Research Assistant &middot; Institute of Quantum Electronics (Prof. Jingbiao Chen)</div>
+                    <ul class="bullet-list text-sm text-gray-700 dark:text-gray-300">
+                        <li>Conducted 420 nm-pumped hot-rubidium vapor experiments toward a dual-wavelength mirrorless laser.</li>
+                        <li>Performed free-space optical alignment and system calibration (polarization control, beam delivery).</li>
+                        <li>Implemented pump frequency stabilization using Modulation Transfer Spectroscopy (MTS).</li>
+                    </ul>
+                </div>
+
+                <!-- PKU 2 -->
+                <div>
+                    <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-1">
+                        <strong class="text-gray-900 dark:text-gray-200">Peking University</strong>
+                        <div class="text-gray-500 text-sm">May 2025 &ndash; Jul 2025</div>
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm mb-2">Research Intern &middot; Prof. Xiao Yuan's Group</div>
+                    <ul class="bullet-list text-sm text-gray-700 dark:text-gray-300">
+                        <li>Developed and optimized Variational Quantum Algorithms (VQA) and neural-network quantum states using <span class="text-accent-light dark:text-accent-dark">PyTorch</span>.</li>
+                        <li>Implemented RBM models for quantum state approximation and conducted Variational Monte Carlo simulations.</li>
+                    </ul>
+                </div>
+
+                <!-- Faraday -->
+                <div>
+                    <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-1">
+                        <strong class="text-gray-900 dark:text-gray-200">Faraday Laser Technology Co., Ltd</strong>
+                        <div class="text-gray-500 text-sm">2024</div>
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm mb-2">Programming Intern</div>
+                    <ul class="bullet-list text-sm text-gray-700 dark:text-gray-300">
+                        <li>Optimized backend software systems, improving stability through rigorous load/stress testing.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2 class="text-xl font-bold mb-4 tracking-tight text-black dark:text-[#f3f4f6]">Skills</h2>
+            <p class="text-[15px] text-gray-700 dark:text-gray-300">
+                <span class="text-accent-light dark:text-accent-dark">Tidy3D</span>, Python (<span class="text-accent-light dark:text-accent-dark">PyTorch</span>, NumPy), C, SQL, LaTeX, Origin
+            </p>
+        </section>
+
+        <footer class="mt-24 text-center text-sm text-gray-500 dark:text-gray-600">
+            <p>&copy; 2024 James Hu. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Script for Theme Toggle -->
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        // Force dark mode initially if no local storage is set
+        if (!('color-theme' in localStorage)) {
+            localStorage.setItem('color-theme', 'dark');
+            document.documentElement.classList.add('dark');
+        }
+
+        // Change the icons inside the button based on current theme
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            // Toggle icons inside button
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // If set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                // If NOT set via local storage previously
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
